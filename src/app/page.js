@@ -1,14 +1,24 @@
 "use client"
 // so in order to work with the events in the next js we have to use the "useClient"
-import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <div>
-        <h1>my name is pankaj</h1>
+        <h1>I am About page</h1>
         {/*below you are using an arrow function (Myfunc) as a component in Next.js. This is completely valid and is a common way to define functional components in React, which Next.js is built upon. */}
+        <Link href={"/login"}>go to login</Link>
         <Myfunc />
+        <div className='flex flex-col gap-y-2 border2 border-black'>
+          <button className='bg-red-500 p-4 rounded-lg w-1/4 ' onClick={() => { router.push("/working-with-routing") }}>see working with nested rounting page</button>
+          <button className='bg-gray-500 p-4 rounded-lg w-1/4' onClick={() => { router.push("/working-with-common-layout") }}>
+            see working with Common layout page
+          </button>
+        </div>
+
       </div>
     </>
   )
@@ -19,6 +29,7 @@ const Myfunc = () => {
     <>
       <h2>Hii there !!!</h2>
       <button onClick={() => { alert("Hii there !!") }}>click me</button>
+      <Link href={"/about"}>go to about</Link>
     </>
   )
 }
@@ -43,3 +54,17 @@ const Myfunc = () => {
 // - `{MyFunc()}` will not be as efficient for rendering React components because it doesn't allow React to manage the component's lifecycle properly. Instead, it treats `MyFunc` as a regular JavaScript function call, and the component won't benefit from React's optimization mechanisms.
 
 // In summary, when you want to render a React component, always use the `<ComponentName />` syntax to ensure that React can manage the component's lifecycle and optimize rendering. Using `{MyFunc()}` is suitable for invoking regular JavaScript functions or inserting dynamic values into JSX but is not meant for rendering React components. Using the correct syntax will help maintain good performance in your React and Next.js applications.
+
+
+// Interview Question :
+
+//  the differnce between the dependencies and devDependecies is that the dependencies used in both i.e development mode as well as in the production mode but the devDependecies only used the development mode !!
+
+
+// Server Component :
+
+// • Render on the Server Side
+// By default, All components are Server components.
+// ● They are closer to the Backend
+// • So BE-related logic and code should write
+// in Server components
