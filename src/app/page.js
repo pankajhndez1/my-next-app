@@ -1,20 +1,25 @@
+"use client"
+// so in order to work with the events in the next js we have to use the "useClient"
 import Image from 'next/image'
 
 export default function Home() {
   return (
-  <>
-  <div>
-    <h1>my name is pankaj</h1>
-    {/*below you are using an arrow function (Myfunc) as a component in Next.js. This is completely valid and is a common way to define functional components in React, which Next.js is built upon. */}
-    <Myfunc/>
-  </div>
-  </>
+    <>
+      <div>
+        <h1>my name is pankaj</h1>
+        {/*below you are using an arrow function (Myfunc) as a component in Next.js. This is completely valid and is a common way to define functional components in React, which Next.js is built upon. */}
+        <Myfunc />
+      </div>
+    </>
   )
 }
 
-const Myfunc =()=>{
-  return(
-    <h2>Hii there !!!</h2>
+const Myfunc = () => {
+  return (
+    <>
+      <h2>Hii there !!!</h2>
+      <button onClick={() => { alert("Hii there !!") }}>click me</button>
+    </>
   )
 }
 
