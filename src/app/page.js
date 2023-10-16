@@ -18,6 +18,17 @@ export default function Home() {
             see working with Common layout page
           </button>
         </div>
+        <div>
+          <div className='flex flex-col gap-y-3 w-1/2'>
+            <p>Working with the conditional layout system</p>
+            <button className='border-2 border-black p-4 bg-red-500 text-white' onClick={() => { router.push("/working-with-conditional-layout") }}>see working with conditional layout</button>
+          
+          {/* working-with-dynamic-routes-imp */}
+          <button className='border-2 border-black p-4 bg-red-500 text-white'
+            onClick={() => { router.push("/working-with-dynamic-routes-imp") }}>
+            working with dynamic routes imp</button>
+          </div>
+        </div>
 
       </div>
     </>
