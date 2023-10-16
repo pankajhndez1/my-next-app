@@ -28,8 +28,11 @@ export default function Home() {
             onClick={() => { router.push("/working-with-dynamic-routes-imp") }}>
             working with dynamic routes imp</button>
           </div>
+          {/* WorkingWithCatchAll */}
+          <button className='border-2 border-black p-4 bg-red-500 text-white'
+            onClick={() => { router.push("/catch-all") }}>
+            Working With Catch All</button>
         </div>
-
       </div>
     </>
   )
