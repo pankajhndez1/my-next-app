@@ -9,7 +9,7 @@ const page = ({ params }) => {
     return (
         <div>
             <p className='text-xl font-bold'>page</p>
-            <p>you sre trying to find the {params.data[0]}st  {params.data[1]}</p>
+            <p>you are trying to find the {params.data[0]}st  {params.data[1]}</p>
         </div>
     )
 }

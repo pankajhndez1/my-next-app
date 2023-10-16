@@ -15,7 +15,8 @@ const WorkingWithCatchAll = () => {
     return (
         <div>
             <p className='text-xl font-bold'>WorkingWithCatchAll</p>
-            <button onClick={() => { Router.push(`catch-all/${num}/lecture`) }}>see multiple urls</button>
+            <button  className='bg-gray-400 p-4 border-2 border-black'
+             onClick={() => { Router.push(`catch-all/${num}/lecture`) }}>see multiple urls</button>
         </div>
     )
 }
